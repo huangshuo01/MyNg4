@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     let comp = fixture.componentInstance;
     let tenants = comp.getTenant();
-    expect(tenants).not.toBeNull();
+    expect(!tenants).toBe(false);
   }));
 });

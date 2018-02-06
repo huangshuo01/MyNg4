@@ -11,12 +11,19 @@ import { Tenants } from './mocks/Tenant.mock';
 export class AppComponent {
   title = 'My first angular app!';
   tenants2:Tenant[];
+  name:string='test';
   constructor(private tenantService:TenantService){
-    this.getTenant();
+    
   }
-  getTenant():Tenant[]{
-    let tenants;
-    this.tenantService.getTenantById().then(tenants => {tenants = tenants;this.tenants2 = tenants;});
-    return tenants;
+
+  getTenant(){
+    this.tenantService.getTenantById().then(
+      tenants => {
+        this.tenants2 = tenants;
+        console.log('tenants2'+this.tenants2[0].name);
+      }
+    ).catch(
+      
+    );
   }
 }
