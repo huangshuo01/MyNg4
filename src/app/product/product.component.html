@@ -1,0 +1,38 @@
+<div class="large-img">
+	<input type="file" class="dropify" data-height="340px" />
+	<!-- <img alt="400x400" src="http://placehold.it/400x400"/> -->
+</div>
+<div class="list-img">
+	<div *ngFor="let item of list" class="small-img up-section">
+		<span class="up-span"></span>
+		<img alt="96x96" src="http://placehold.it/96x96" class="listimg" />
+	</div>
+	<div ng-if="list.length < 8" class="small-img z_file">
+		<img alt="96x96" src="../../assets/img/a11.png" class="listimg" />
+		<input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>
+	</div>
+</div>
+
+<div class="img-box full">
+	<section class=" img-section">
+		<p class="up-p">作品图片：
+			<span class="up-span">最多可以上传5张图片，马上上传</span>
+		</p>
+		<div class="z_photo upimg-div clear">
+			<section class="z_file fl">
+				<img src="../../assets/img/a11.png" class="add-img">
+				<input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple
+				/>
+			</section>
+		</div>
+	</section>
+</div>
+<aside class="mask works-mask">
+	<div class="mask-content">
+		<p class="del-p">您确定要删除作品图片吗？</p>
+		<p class="check-p">
+			<span class="del-com wsdel-ok">确定</span>
+			<span class="wsdel-no">取消</span>
+		</p>
+	</div>
+</aside>
